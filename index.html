@@ -1,10 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <title>Секретный Чат</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+  <div class="chat-wrapper">
+    <h1>🔒 Секретный Чат</h1>
+    <div class="chat-box" id="messages"></div>
+    <form id="chat-form">
+      <input type="text" id="message-input" placeholder="Введите сообщение..." required />
+      <button type="submit">➤</button>
+    </form>
+    <div class="btn-group">
+      <button class="btn" id="save-btn">💾 Сохранить чат</button>
+      <label class="upload-label">
+        📤 Загрузить чат
+        <input type="file" id="upload-btn" accept=".json" hidden />
+      </label>
+      <button class="btn" id="clear-btn" style="background: #ff4c4c; color: white;">🧨 Очистить</button>
+    </div>
+    <p class="notice">⚠️ Сообщения хранятся только в браузере. Не забудь сохранить их перед очисткой.</p>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
